@@ -12,6 +12,36 @@ export default function ImportView({ onAnalysisComplete, recentAnalyses, onSelec
   const [rawEmailContent, setRawEmailContent] = useState("");
   const [showPasteMode, setShowPasteMode] = useState(false);
   const fileInputRef = useRef(null);
+  const sampleEmail = `From: "Account Security" <security@example.com>
+To: you@example.com
+Subject: Action required: confirm your password
+Date: Tue, 12 Mar 2024 10:14:22 +0000
+Message-ID: <sample-argus-001@example.com>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="argus-boundary-1"
+
+--argus-boundary-1
+Content-Type: text/plain; charset="UTF-8"
+
+Hi,
+
+We detected a sign-in from a new device. Please confirm your password to keep access.
+
+Confirm here: http://example.com/secure/login
+
+If you do not confirm within 24 hours, access will be limited.
+
+Thanks,
+Security Team
+
+--argus-boundary-1
+Content-Type: text/plain; name="instructions.txt"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="instructions.txt"
+
+VGhpcyBpcyBhIHNhZmUgc2FtcGxlIGF0dGFjaG1lbnQuCg==
+--argus-boundary-1--
+`;
 
   const analyzeEmail = async (contentOrBytes) => {
     const email = await parseEmail(contentOrBytes);
@@ -120,10 +150,61 @@ export default function ImportView({ onAnalysisComplete, recentAnalyses, onSelec
     }
   };
 
+  const handleSampleEmail = async () => {
+    setError(null);
+    setIsLoading(true);
+    try {
+      const result = await analyzeEmail(sampleEmail);
+      onAnalysisComplete(result);
+    } catch (err) {
+      setError(`Failed to parse email: ${err.message}`);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <div className="max-w-7xl mx-auto px-6 py-8">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-6">
+          <div className="rounded-xl border border-slate-800/80 bg-slate-900/40 p-6">
+            <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+              <div className="space-y-3">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Argus</p>
+                  <h2 className="text-xl font-semibold text-slate-100">Phishing email analysis</h2>
+                </div>
+                <p className="text-sm text-slate-400 max-w-xl">
+                  Inspect headers, URLs, and impersonation signals from suspicious emails to
+                  understand what stands out before you respond.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 text-xs rounded-full border border-slate-700 bg-slate-800/60 text-slate-300">
+                    Header analysis
+                  </span>
+                  <span className="px-3 py-1 text-xs rounded-full border border-slate-700 bg-slate-800/60 text-slate-300">
+                    URL extraction
+                  </span>
+                  <span className="px-3 py-1 text-xs rounded-full border border-slate-700 bg-slate-800/60 text-slate-300">
+                    Impersonation checks
+                  </span>
+                </div>
+                <p className="text-xs text-slate-500">
+                  Analysis runs locally in your browser. Files are not uploaded.
+                </p>
+              </div>
+              <div className="flex flex-col gap-2">
+                <button
+                  onClick={handleSampleEmail}
+                  disabled={isLoading}
+                  className="px-4 py-2 border border-slate-700 text-slate-200 rounded-lg text-sm font-medium hover:border-slate-500 hover:text-slate-100 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+                >
+                  Try a sample phishing email
+                </button>
+              </div>
+            </div>
+          </div>
+
           <div
             onDragOver={handleDragOver}
             onDragLeave={handleDragLeave}

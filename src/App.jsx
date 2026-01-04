@@ -49,10 +49,10 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950">
+    <div className="min-h-screen bg-slate-950 flex flex-col">
       <Header currentView={currentView} onViewChange={setCurrentView} />
 
-      <main>
+      <main className="flex-1">
         {currentView === 'import' && (
           <ImportView
             onAnalysisComplete={handleAnalysisComplete}
@@ -65,6 +65,20 @@ function App() {
         )}
         {currentView === 'export' && <ExportView analysis={currentAnalysis} />}
       </main>
+
+      <footer className="border-t border-slate-800 bg-slate-900/40">
+        <div className="max-w-7xl mx-auto px-6 py-4 text-xs text-slate-500 text-center">
+          made by an analyst for analyst{' '}
+          <a
+            href="https://www.heyosj.com"
+            target="_blank"
+            rel="noreferrer"
+            className="text-slate-400 hover:text-slate-200 transition-colors"
+          >
+            @heyosj
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }

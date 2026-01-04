@@ -12,7 +12,12 @@ export default function Header({ currentView, onViewChange }) {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-600 flex items-center justify-center">
+            <button
+              type="button"
+              onClick={() => onViewChange('import')}
+              className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-600 flex items-center justify-center hover:opacity-90 transition-opacity"
+              aria-label="Go to import"
+            >
               <svg
                 className="w-6 h-6 text-white"
                 fill="none"
@@ -32,13 +37,15 @@ export default function Header({ currentView, onViewChange }) {
                   d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
                 />
               </svg>
-            </div>
+            </button>
             <div>
-              <a href="https://heyosj.github.io/argus/" className="cursor-pointer">
-                <h1 className="text-xl font-semibold text-slate-100 hover:opacity-80">
-                  ARGUS
-                </h1>
-              </a>
+              <button
+                type="button"
+                onClick={() => onViewChange('import')}
+                className="text-xl font-semibold text-slate-100 hover:opacity-80 transition-opacity"
+              >
+                ARGUS
+              </button>
               <p className="text-xs text-slate-400">Phishing Email Analyzer</p>
             </div>
           </div>

@@ -28,7 +28,8 @@ export default function RecentAnalyses({ analyses, onSelect }) {
           Recent Analyses
         </h3>
         <p className="text-slate-400 text-sm">
-          No recent analyses. Import an email to get started.
+          Recent analyses will appear here after you import or paste an email,
+          so you can jump back to prior results.
         </p>
       </div>
     );

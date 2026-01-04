@@ -131,6 +131,10 @@ export default function AttachmentPreview({ attachment, onClose }) {
               </span>
             ) : null}
           </div>
+          <div className="mt-2 text-xs text-slate-500">
+            Preview renders locally and is read-only. This isn&apos;t a malware
+            sandbox, so treat attachments as untrusted.
+          </div>
         </div>
 
         <div className="flex items-center gap-2 flex-shrink-0">
