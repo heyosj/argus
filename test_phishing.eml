@@ -1,0 +1,125 @@
+Received: from mail-evil.attacker.com (mail-evil.attacker.com [185.234.72.19])
+        by mx.victim.com with ESMTP id abc123
+        for <john.doe@company.com>; Sat, 4 Jan 2025 10:30:00 -0500
+Received: from localhost (unknown [192.168.1.100])
+        by mail-evil.attacker.com with SMTP id xyz789;
+        Sat, 4 Jan 2025 10:29:55 -0500
+Authentication-Results: mx.victim.com;
+        spf=fail (sender IP is 185.234.72.19) smtp.mailfrom=security@paypal.com;
+        dkim=fail (signature verification failed);
+        dmarc=fail (p=reject) header.from=paypal.com
+Received-SPF: fail (mx.victim.com: domain of paypal.com does not designate 185.234.72.19 as permitted sender)
+From: PayPal Security Team <security@paypal.com>
+Reply-To: paypal-verify-account@gmail.com
+Return-Path: <bounces@attacker-domain.xyz>
+To: john.doe@company.com
+Subject: URGENT: Your PayPal Account Has Been Limited - Immediate Action Required
+Date: Sat, 4 Jan 2025 10:30:00 -0500
+Message-ID: <fake-message-id-12345@attacker.com>
+X-Mailer: Evil Phishing Tool v1.0
+X-Originating-IP: [185.234.72.19]
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="----=_NextPart_000_0001_01D12345.ABCDEF00"
+
+------=_NextPart_000_0001_01D12345.ABCDEF00
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+Dear John Doe,
+
+URGENT NOTICE: Your PayPal account has been temporarily limited!
+
+We have noticed unusual activity on your account and need you to verify your identity immediately to restore full access. Your account will be permanently suspended within 24 hours if you do not take action.
+
+To verify your account, please click the link below:
+
+https://paypa1-secure-verify.bit.ly/account/restore?id=8372615
+https://www.paypal-security-check.com/verify.php?user=john.doe
+
+You will need to provide:
+- Your full name
+- Your PayPal password
+- Your Social Security Number: XXX-XX-XXXX
+- Your credit card number for verification
+
+If you do not verify your account immediately, you will lose access to your funds.
+
+For assistance, contact us at: support@paypal-help-center.net or call 1-800-555-0123
+
+Thank you for your immediate attention to this matter.
+
+Best regards,
+PayPal Security Team
+security@paypal.com
+
+------=_NextPart_000_0001_01D12345.ABCDEF00
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PayPal Security Alert</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f5f5f5; padding: 20px;">
+    <div style="max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px;">
+        <img src="https://fake-paypal-logo.attacker.com/logo.png" alt="PayPal" style="width: 150px;">
+
+        <h2 style="color: #c00;">URGENT: Account Security Alert</h2>
+
+        <p>Dear <strong>John Doe</strong>,</p>
+
+        <p style="color: #c00; font-weight: bold;">Your account has been LIMITED due to suspicious activity!</p>
+
+        <p>We detected unauthorized access attempts from the following location:</p>
+        <ul>
+            <li>IP Address: 45.33.32.156</li>
+            <li>Location: Unknown</li>
+            <li>Time: January 4, 2025 09:15 AM</li>
+        </ul>
+
+        <p><strong>You must verify your identity within 24 hours or your account will be permanently suspended.</strong></p>
+
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="https://paypa1-secure-verify.bit.ly/account/restore?id=8372615"
+               style="background-color: #0070ba; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-size: 16px;">
+                Verify My Account Now
+            </a>
+        </div>
+
+        <p>Enter your login credentials and complete the verification process:</p>
+        <ul>
+            <li>PayPal Email: john.doe@company.com</li>
+            <li>Password: [Enter your password]</li>
+            <li>SSN: [For identity verification]</li>
+        </ul>
+
+        <p>Alternative verification link: <a href="https://tinyurl.com/paypal-verify-2025">Click Here</a></p>
+
+        <hr style="margin: 30px 0;">
+
+        <p style="font-size: 12px; color: #666;">
+            This is an automated message from PayPal Security.<br>
+            Contact: support@paypal-help-center.net<br>
+            Phone: 1-800-555-0123
+        </p>
+    </div>
+</body>
+</html>
+
+------=_NextPart_000_0001_01D12345.ABCDEF00
+Content-Type: application/pdf; name="Account_Verification_Form.pdf"
+Content-Disposition: attachment; filename="Account_Verification_Form.pdf"
+Content-Transfer-Encoding: base64
+
+JVBERi0xLjQKMSAwIG9iago8PAovVHlwZSAvQ2F0YWxvZwovUGFnZXMgMiAwIFIKPj4KZW5kb2Jq
+CjIgMCBvYmoKPDwKL1R5cGUgL1BhZ2VzCi9LaWRzIFszIDAgUl0KL0NvdW50IDEKL01lZGlhQm94
+IFswIDAgNjEyIDc5Ml0KPj4KZW5kb2JqCjMgMCBvYmoKPDwKL1R5cGUgL1BhZ2UKL1BhcmVudCAy
+IDAgUgovUmVzb3VyY2VzIDw8Cj4+Ci9Db250ZW50cyA0IDAgUgo+PgplbmRvYmoKNCAwIG9iago8
+PAovTGVuZ3RoIDQ0Cj4+CnN0cmVhbQpCVAovRjEgMTggVGYKMTAwIDcwMCBUZAooRmFrZSBQREYp
+IFRqCkVUCmVuZHN0cmVhbQplbmRvYmoKeHJlZgowIDUKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAw
+MDAwMDA5IDAwMDAwIG4gCjAwMDAwMDAwNTggMDAwMDAgbiAKMDAwMDAwMDE0OCAwMDAwMCBuIAow
+MDAwMDAwMjQ3IDAwMDAwIG4gCnRyYWlsZXIKPDwKL1NpemUgNQovUm9vdCAxIDAgUgo+PgpzdGFy
+dHhyZWYKMzQwCiUlRU9GCg==
+
+------=_NextPart_000_0001_01D12345.ABCDEF00--

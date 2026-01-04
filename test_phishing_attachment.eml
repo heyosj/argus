@@ -1,0 +1,58 @@
+From: "PayPal Security" <security@paypal-example.com>
+To: "Oscar" <osj@example.com>
+Subject: Action Required: Verify your account (TEST)
+Date: Sat, 04 Jan 2026 15:05:00 -0500
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="argus_boundary_001"
+
+--argus_boundary_001
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Hi,
+
+This is a TEST email for Argus. It contains 2 attachments:
+1) readme.txt (text)
+2) Account_Verification_Form.pdf (pdf)
+
+If the attachment preview is blank, your UI is probably not receiving a Blob
+for the attachment bytes, or the preview container has a sizing/visibility issue.
+
+Thanks,
+Argus Test Harness
+
+--argus_boundary_001
+Content-Type: text/plain; name="readme.txt"
+Content-Disposition: attachment; filename="readme.txt"
+Content-Transfer-Encoding: base64
+
+VGhpcyBpcyBhIHRlc3QgYXR0YWNobWVudCBmb3IgQXJndXMgcHJldmlldy4KTGluZSAyLgo=
+
+--argus_boundary_001
+Content-Type: application/pdf; name="Account_Verification_Form.pdf"
+Content-Disposition: attachment; filename="Account_Verification_Form.pdf"
+Content-Transfer-Encoding: base64
+
+JVBERi0xLjMKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgaHR0cDovL3d3
+dy5yZXBvcnRsYWIuY29tCjEgMCBvYmoKPDwKL0YxIDIgMCBSCj4+CmVuZG9iagoyIDAgb2JqCjw8
+Ci9CYXNlRm9udCAvSGVsdmV0aWNhIC9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9OYW1lIC9G
+MQovU3VidHlwZSAvVHlwZTEKL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjMgMCBvYmoKPDwKL0NvbnRl
+bnRzIDcgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9QYXJlbnQgNiAwIFIKL1Jlc291cmNl
+cyA8PAovRm9udCA8PAovRjEgMiAwIFIKPj4KPj4KL1JvdGF0ZSAwCi9UcmFucyA8PAoKPj4KL1R5
+cGUgL1BhZ2UKPj4KZW5kb2JqCjQgMCBvYmoKPDwKL1BhZ2VzIDYgMCBSCi9UeXBlIC9DYXRhbG9n
+Cj4+CmVuZG9iago1IDAgb2JqCjw8Ci9BdXRob3IgKP7/
+L0NyZWF0aW9uRGF0ZSAoRDoyMDI2MDEwNDE5MDUwMC0wNScwMCcpCi9DcmVhdG9yIChSZXBvcnRM
+YWIgUERGIExpYnJhcnkgLSB3d3cucmVwb3J0bGFiLmNvbSkKL0tleXdvcmRzICgpCi9Nb2REYXRl
+IChEOjIwMjYwMTA0MTkwNTAwLTA1JzAwJykKL1Byb2R1Y2VyIChSZXBvcnRMYWIgUERGIExpYnJh
+cnkgLSB3d3cucmVwb3J0bGFiLmNvbSkKL1N1YmplY3QgKHVuc3BlY2lmaWVkKQovVGl0bGUgKHVu
+c3BlY2lmaWVkKQovVHJhcHBlZCAvRmFsc2UKPj4KZW5kb2JqCjYgMCBvYmoKPDwKL0NvdW50IDEK
+L0tpZHMgWzMgMCBSXQovVHlwZSAvUGFnZXMKPj4KZW5kb2JqCjcgMCBvYmoKPDwKL0xlbmd0aCAy
+MDcKPj4Kc3RyZWFtCkJUCi9GMSAyNCBUZgowIDAgMCAxIDcyIDcyMCBUbQooSGVsbG8gQXJndXMp
+IFRqClQqCi9GMSAxMiBUZgowIDAgMCAxIDcyIDY5MCBUbQooVGhpcyBpcyBhIHRlc3QgUERGIGF0
+dGFjaG1lbnQgZm9yIHByZXZpZXcuKSBUagpFVAplbmRzdHJlYW0KZW5kb2JqCnhyZWYKMCA4CjAw
+MDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDA5OCAwMDAwMCBuIAowMDAwMDAwMTQxIDAwMDAwIG4g
+CjAwMDAwMDAyNTcgMDAwMDAgbiAKMDAwMDAwMDQ2MiAwMDAwMCBuIAowMDAwMDAwNTI3IDAwMDAw
+IG4gCjAwMDAwMDA4NTQgMDAwMDAgbiAKMDAwMDAwMDkzMyAwMDAwMCBuIAp0cmFpbGVyCjw8Ci9J
+bmZvIDUgMCBSCi9Sb290IDQgMCBSCi9TaXplIDgKPj4Kc3RhcnR4cmVmCjEwOTIKJSVFT0YK
+
+--argus_boundary_001--
