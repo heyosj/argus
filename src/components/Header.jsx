@@ -34,7 +34,7 @@ export default function Header({ currentView, onViewChange }) {
               </svg>
             </div>
             <div>
-              <a href="/" className="cursor-pointer">
+              <a href="/argus" className="cursor-pointer">
                 <h1 className="text-xl font-semibold text-slate-100 hover:opacity-80">
                   ARGUS
                 </h1>
