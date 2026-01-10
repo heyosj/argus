@@ -4,7 +4,7 @@ import ImportView from './components/ImportView';
 import AnalysisView from './components/AnalysisView';
 import ExportView from './components/ExportView';
 
-const STORAGE_KEY = 'argus_recent_analyses';
+const STORAGE_KEY = "prview_recent_analyses";
 const MAX_RECENT = 20;
 
 function App() {

@@ -1,12 +1,12 @@
 [package]
-name = "argus"
+name = "prview"
 version = "0.1.0"
 description = "Phishing Email Analyzer"
-authors = ["Argus Team"]
+authors = ["Prview Team"]
 edition = "2021"
 
 [lib]
-name = "argus_lib"
+name = "prview_lib"
 crate-type = ["staticlib", "cdylib", "rlib"]
 
 [build-dependencies]

@@ -44,7 +44,7 @@ export default function Header({ currentView, onViewChange }) {
                 onClick={() => onViewChange('import')}
                 className="text-xl font-semibold text-slate-100 hover:opacity-80 transition-opacity"
               >
-                ARGUS
+                PRVIEW
               </button>
               <p className="text-xs text-slate-400">Phishing Email Analyzer</p>
             </div>

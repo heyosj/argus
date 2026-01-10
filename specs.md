@@ -1,7 +1,7 @@
-# Project Argus - Phishing Email Analyzer
+# Project Prview - Phishing Email Analyzer
 
 ## Project Overview
-Build a desktop application called "Argus" for analyzing phishing emails locally with automatic redaction and IOC extraction. Named after the hundred-eyed Greek mythological figure, it provides security researchers a tool to safely analyze and share phishing attempts.
+Build a desktop application called "Prview" for analyzing phishing emails locally with automatic redaction and IOC extraction. The goal is to give security researchers a tool to safely analyze and share phishing attempts.
 
 ## Tech Stack
 - **Framework**: Tauri (Rust backend for security/performance)
@@ -153,7 +153,7 @@ Reference the mockup artifact for exact design. Key specs:
 - Rounded corners: rounded-lg (0.5rem) or rounded-xl (0.75rem)
 
 **Components:**
-- Header with Argus branding (Eye icon) and nav
+- Header with Prview branding (Eye icon) and nav
 - Drag/drop zone with dashed border, hover state
 - Recent analyses list with threat indicators
 - Analysis view with threat level banner
@@ -208,7 +208,7 @@ Reference the mockup artifact for exact design. Key specs:
 
 ## File Structure
 ```
-argus/
+prview/
 ├── src-tauri/          # Rust backend
 │   ├── src/
 │   │   ├── main.rs

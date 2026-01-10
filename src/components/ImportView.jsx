@@ -16,11 +16,11 @@ export default function ImportView({ onAnalysisComplete, recentAnalyses, onSelec
 To: you@example.com
 Subject: Action required: confirm your password
 Date: Tue, 12 Mar 2024 10:14:22 +0000
-Message-ID: <sample-argus-001@example.com>
+Message-ID: <sample-prview-001@example.com>
 MIME-Version: 1.0
-Content-Type: multipart/mixed; boundary="argus-boundary-1"
+Content-Type: multipart/mixed; boundary="prview-boundary-1"
 
---argus-boundary-1
+--prview-boundary-1
 Content-Type: text/plain; charset="UTF-8"
 
 Hi,
@@ -34,13 +34,13 @@ If you do not confirm within 24 hours, access will be limited.
 Thanks,
 Security Team
 
---argus-boundary-1
+--prview-boundary-1
 Content-Type: text/plain; name="instructions.txt"
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="instructions.txt"
 
 VGhpcyBpcyBhIHNhZmUgc2FtcGxlIGF0dGFjaG1lbnQuCg==
---argus-boundary-1--
+--prview-boundary-1--
 `;
 
   const analyzeEmail = async (contentOrBytes) => {
@@ -171,7 +171,7 @@ VGhpcyBpcyBhIHNhZmUgc2FtcGxlIGF0dGFjaG1lbnQuCg==
             <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
               <div className="space-y-3">
                 <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Argus</p>
+                  <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Prview</p>
                   <h2 className="text-xl font-semibold text-slate-100">Phishing email analysis</h2>
                 </div>
                 <p className="text-sm text-slate-400 max-w-xl">

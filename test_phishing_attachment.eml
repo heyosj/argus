@@ -3,15 +3,15 @@ To: "Oscar" <osj@example.com>
 Subject: Action Required: Verify your account (TEST)
 Date: Sat, 04 Jan 2026 15:05:00 -0500
 MIME-Version: 1.0
-Content-Type: multipart/mixed; boundary="argus_boundary_001"
+Content-Type: multipart/mixed; boundary="prview_boundary_001"
 
---argus_boundary_001
+--prview_boundary_001
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: 7bit
 
 Hi,
 
-This is a TEST email for Argus. It contains 2 attachments:
+This is a TEST email for Prview. It contains 2 attachments:
 1) readme.txt (text)
 2) Account_Verification_Form.pdf (pdf)
 
@@ -19,16 +19,16 @@ If the attachment preview is blank, your UI is probably not receiving a Blob
 for the attachment bytes, or the preview container has a sizing/visibility issue.
 
 Thanks,
-Argus Test Harness
+Prview Test Harness
 
---argus_boundary_001
+--prview_boundary_001
 Content-Type: text/plain; name="readme.txt"
 Content-Disposition: attachment; filename="readme.txt"
 Content-Transfer-Encoding: base64
 
 VGhpcyBpcyBhIHRlc3QgYXR0YWNobWVudCBmb3IgQXJndXMgcHJldmlldy4KTGluZSAyLgo=
 
---argus_boundary_001
+--prview_boundary_001
 Content-Type: application/pdf; name="Account_Verification_Form.pdf"
 Content-Disposition: attachment; filename="Account_Verification_Form.pdf"
 Content-Transfer-Encoding: base64
@@ -55,4 +55,4 @@ CjAwMDAwMDAyNTcgMDAwMDAgbiAKMDAwMDAwMDQ2MiAwMDAwMCBuIAowMDAwMDAwNTI3IDAwMDAw
 IG4gCjAwMDAwMDA4NTQgMDAwMDAgbiAKMDAwMDAwMDkzMyAwMDAwMCBuIAp0cmFpbGVyCjw8Ci9J
 bmZvIDUgMCBSCi9Sb290IDQgMCBSCi9TaXplIDgKPj4Kc3RhcnR4cmVmCjEwOTIKJSVFT0YK
 
---argus_boundary_001--
+--prview_boundary_001--
