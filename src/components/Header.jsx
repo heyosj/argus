@@ -9,8 +9,8 @@ export default function Header({ currentView, onViewChange }) {
 
   return (
     <header className="border-b border-slate-700 bg-slate-900/80 backdrop-blur-sm sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-3">
             <button
               type="button"
@@ -50,12 +50,12 @@ export default function Header({ currentView, onViewChange }) {
             </div>
           </div>
 
-          <nav className="flex items-center gap-4">
+          <nav className="flex flex-wrap items-center gap-2 sm:gap-4">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => onViewChange(item.id)}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                className={`px-3 py-2 sm:px-4 rounded-lg text-xs sm:text-sm font-medium transition-colors ${
                   currentView === item.id
                     ? 'bg-cyan-500/20 text-cyan-400'
                     : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800'

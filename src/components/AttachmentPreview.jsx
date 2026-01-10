@@ -115,7 +115,7 @@ export default function AttachmentPreview({ attachment, onClose }) {
   return (
     <div className="rounded-xl border border-slate-700 bg-slate-900/40 overflow-hidden">
       {/* Header */}
-      <div className="px-4 py-3 border-b border-slate-700 flex items-start justify-between gap-4">
+      <div className="px-4 py-3 border-b border-slate-700 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div className="min-w-0">
           <div className="flex items-center gap-2">
             <p className="text-slate-200 font-medium truncate">{name}</p>
@@ -137,7 +137,7 @@ export default function AttachmentPreview({ attachment, onClose }) {
           </div>
         </div>
 
-        <div className="flex items-center gap-2 flex-shrink-0">
+        <div className="flex flex-wrap items-center gap-2">
           {objectUrl ? (
             <>
               <a
@@ -174,14 +174,14 @@ export default function AttachmentPreview({ attachment, onClose }) {
             <iframe
               title={`Preview ${name}`}
               src={objectUrl}
-              className="w-full h-[520px]"
+              className="w-full h-[320px] sm:h-[520px]"
             />
           </div>
         ) : null}
 
         {/* Text */}
         {isTextLike(mime, name) ? (
-          <div className="rounded-lg border border-slate-700 bg-slate-950 max-h-[520px] overflow-auto">
+          <div className="rounded-lg border border-slate-700 bg-slate-950 max-h-[320px] sm:max-h-[520px] overflow-auto">
             {textError ? (
               <div className="p-4 text-sm text-red-300">
                 Failed to preview text: {textError}

@@ -164,7 +164,7 @@ VGhpcyBpcyBhIHNhZmUgc2FtcGxlIGF0dGFjaG1lbnQuCg==
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-6">
           <div className="rounded-xl border border-slate-800/80 bg-slate-900/40 p-6">
@@ -192,11 +192,11 @@ VGhpcyBpcyBhIHNhZmUgc2FtcGxlIGF0dGFjaG1lbnQuCg==
                   Analysis runs locally in your browser. Nothing is uploaded.
                 </p>
               </div>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
                 <button
                   onClick={handleSampleEmail}
                   disabled={isLoading}
-                  className="px-4 py-2 border border-slate-700 text-slate-200 rounded-lg text-sm font-medium hover:border-slate-500 hover:text-slate-100 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="w-full sm:w-auto px-4 py-2 border border-slate-700 text-slate-200 rounded-lg text-sm font-medium hover:border-slate-500 hover:text-slate-100 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   Try a sample phishing email
                 </button>
@@ -208,7 +208,7 @@ VGhpcyBpcyBhIHNhZmUgc2FtcGxlIGF0dGFjaG1lbnQuCg==
             onDragOver={handleDragOver}
             onDragLeave={handleDragLeave}
             onDrop={handleDrop}
-            className={`relative border-2 border-dashed rounded-xl p-12 text-center transition-all ${
+            className={`relative border-2 border-dashed rounded-xl p-6 sm:p-12 text-center transition-all ${
               isDragging
                 ? "border-cyan-500 bg-cyan-500/10"
                 : "border-slate-700 hover:border-slate-600 bg-slate-800/30"
@@ -221,9 +221,9 @@ VGhpcyBpcyBhIHNhZmUgc2FtcGxlIGF0dGFjaG1lbnQuCg==
               </div>
             ) : (
               <>
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-slate-700/50 flex items-center justify-center">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-4 rounded-full bg-slate-700/50 flex items-center justify-center">
                   <svg
-                    className={`w-8 h-8 ${isDragging ? "text-cyan-400" : "text-slate-400"}`}
+                    className={`w-7 h-7 sm:w-8 sm:h-8 ${isDragging ? "text-cyan-400" : "text-slate-400"}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -250,7 +250,7 @@ VGhpcyBpcyBhIHNhZmUgc2FtcGxlIGF0dGFjaG1lbnQuCg==
                 />
                 <button
                   onClick={() => fileInputRef.current?.click()}
-                  className="px-4 py-2 bg-slate-700 hover:bg-slate-600 text-slate-200 rounded-lg text-sm font-medium transition-colors"
+                  className="w-full sm:w-auto px-4 py-2 bg-slate-700 hover:bg-slate-600 text-slate-200 rounded-lg text-sm font-medium transition-colors"
                 >
                   Or browse files
                 </button>
@@ -306,7 +306,7 @@ VGhpcyBpcyBhIHNhZmUgc2FtcGxlIGF0dGFjaG1lbnQuCg==
                 <button
                   onClick={handlePasteSubmit}
                   disabled={isLoading || !rawEmailContent.trim()}
-                  className="px-4 py-2 bg-cyan-600 hover:bg-cyan-500 disabled:bg-slate-700 disabled:text-slate-500 text-white rounded-lg text-sm font-medium transition-colors"
+                  className="w-full sm:w-auto px-4 py-2 bg-cyan-600 hover:bg-cyan-500 disabled:bg-slate-700 disabled:text-slate-500 text-white rounded-lg text-sm font-medium transition-colors"
                 >
                   Analyze Email
                 </button>

@@ -10,7 +10,7 @@ export default function AnalysisView({ analysis, onExport }) {
 
   if (!analysis) {
     return (
-      <div className="max-w-7xl mx-auto px-6 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
         <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-12 text-center">
           <svg
             className="w-16 h-16 mx-auto text-slate-600 mb-4"
@@ -116,12 +116,12 @@ export default function AnalysisView({ analysis, onExport }) {
     selectedAttachment?.blob || selectedAttachment?.file || selectedAttachment?.data;
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-8 space-y-6">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8 space-y-6">
       {/* Threat Level Banner */}
       <div className={`rounded-xl border p-6 ${getThreatLevelStyles()}`}>
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-full bg-current/20 flex items-center justify-center">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-current/20 flex items-center justify-center">
               {threat.level === "High" && (
                 <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
@@ -141,7 +141,7 @@ export default function AnalysisView({ analysis, onExport }) {
             <div>
               <div className="flex items-center gap-3">
                 <span className="text-xl font-semibold">{threat.level} Risk</span>
-                <div className="flex items-center gap-2 text-sm opacity-80">
+                <div className="flex flex-wrap items-center gap-2 text-sm opacity-80">
                   {severityCounts.high > 0 && (
                     <span className="px-2 py-0.5 rounded bg-red-500/20 text-red-300">
                       {severityCounts.high} critical
@@ -164,7 +164,7 @@ export default function AnalysisView({ analysis, onExport }) {
           </div>
           <button
             onClick={() => onExport()}
-            className="px-4 py-2 bg-slate-900/50 hover:bg-slate-900 rounded-lg text-sm font-medium transition-colors"
+            className="w-full sm:w-auto px-4 py-2 bg-slate-900/50 hover:bg-slate-900 rounded-lg text-sm font-medium transition-colors"
           >
             Export Report
           </button>
@@ -172,12 +172,12 @@ export default function AnalysisView({ analysis, onExport }) {
       </div>
 
       {/* Tab Navigation */}
-      <div className="flex items-center gap-1 border-b border-slate-700">
+      <div className="flex flex-wrap items-center gap-1 border-b border-slate-700">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`px-4 py-3 text-sm font-medium border-b-2 transition-colors ${
+            className={`px-3 sm:px-4 py-3 text-xs sm:text-sm font-medium border-b-2 transition-colors ${
               activeTab === tab.id
                 ? "border-cyan-500 text-cyan-400"
                 : "border-transparent text-slate-400 hover:text-slate-200"
@@ -230,7 +230,7 @@ export default function AnalysisView({ analysis, onExport }) {
           <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-6">
             <h3 className="text-lg font-medium text-slate-200 mb-4">Authentication Results</h3>
             <div className="space-y-3">
-              <div className={`flex items-center justify-between p-3 rounded-lg ${getAuthStatusColor(email.authentication.spf_status)}`}>
+              <div className={`flex items-center justify-between gap-3 p-3 rounded-lg ${getAuthStatusColor(email.authentication.spf_status)}`}>
                 <div>
                   <span className="font-medium">SPF</span>
                   <p className="text-xs opacity-75 mt-0.5">Sender Policy Framework</p>
@@ -238,7 +238,7 @@ export default function AnalysisView({ analysis, onExport }) {
                 <span className="font-mono font-semibold">{email.authentication.spf_status.toUpperCase()}</span>
               </div>
 
-              <div className={`flex items-center justify-between p-3 rounded-lg ${getAuthStatusColor(email.authentication.dkim_status)}`}>
+              <div className={`flex items-center justify-between gap-3 p-3 rounded-lg ${getAuthStatusColor(email.authentication.dkim_status)}`}>
                 <div>
                   <span className="font-medium">DKIM</span>
                   <p className="text-xs opacity-75 mt-0.5">DomainKeys Identified Mail</p>
@@ -246,7 +246,7 @@ export default function AnalysisView({ analysis, onExport }) {
                 <span className="font-mono font-semibold">{email.authentication.dkim_status.toUpperCase()}</span>
               </div>
 
-              <div className={`flex items-center justify-between p-3 rounded-lg ${getAuthStatusColor(email.authentication.dmarc_status)}`}>
+              <div className={`flex items-center justify-between gap-3 p-3 rounded-lg ${getAuthStatusColor(email.authentication.dmarc_status)}`}>
                 <div>
                   <span className="font-medium">DMARC</span>
                   <p className="text-xs opacity-75 mt-0.5">Domain-based Message Authentication</p>
@@ -313,7 +313,7 @@ export default function AnalysisView({ analysis, onExport }) {
           {/* Attachments */}
           {email.attachments.length > 0 && (
             <div className="md:col-span-2 bg-slate-800/50 rounded-xl border border-slate-700 p-6">
-              <div className="flex items-center justify-between gap-4 mb-2">
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-4 mb-2">
                 <h3 className="text-lg font-medium text-slate-200">Attachments</h3>
                 <span className="text-xs text-slate-500">
                   Click an attachment to preview
@@ -330,13 +330,13 @@ export default function AnalysisView({ analysis, onExport }) {
                       key={index}
                       type="button"
                       onClick={() => handleAttachmentClick(attachment)}
-                      className={`w-full text-left flex items-center justify-between p-3 rounded-lg border transition-colors cursor-pointer ${
+                      className={`w-full text-left flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between p-3 rounded-lg border transition-colors cursor-pointer ${
                         isActive
                           ? "bg-slate-900/70 border-cyan-500/30"
                           : "bg-slate-900/50 border-slate-800 hover:bg-slate-900/70 hover:border-slate-700"
                       }`}
                     >
-                      <div className="flex items-center gap-3">
+                      <div className="flex items-center gap-3 min-w-0">
                         <svg
                           className="w-5 h-5 text-slate-400"
                           fill="none"
@@ -350,7 +350,7 @@ export default function AnalysisView({ analysis, onExport }) {
                             d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"
                           />
                         </svg>
-                        <div>
+                        <div className="min-w-0">
                           <p className="text-slate-200 font-medium">
                             {attachment.filename}
                           </p>
@@ -428,8 +428,8 @@ export default function AnalysisView({ analysis, onExport }) {
           <h3 className="text-lg font-medium text-slate-200 mb-4">Email Headers</h3>
           <div className="space-y-2 max-h-[600px] overflow-y-auto">
             {email.headers.map((header, index) => (
-              <div key={index} className="flex gap-3 p-3 bg-slate-900/50 rounded-lg">
-                <span className="text-cyan-400 font-mono text-sm min-w-32 flex-shrink-0">
+              <div key={index} className="flex flex-col gap-1 sm:flex-row sm:gap-3 p-3 bg-slate-900/50 rounded-lg">
+                <span className="text-cyan-400 font-mono text-sm sm:min-w-32 flex-shrink-0">
                   {header.name}:
                 </span>
                 <span className="text-slate-300 font-mono text-sm break-all">

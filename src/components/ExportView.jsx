@@ -9,7 +9,7 @@ export default function ExportView({ analysis }) {
 
   if (!analysis) {
     return (
-      <div className="max-w-7xl mx-auto px-6 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
         <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-12 text-center">
           <svg
             className="w-16 h-16 mx-auto text-slate-600 mb-4"
@@ -138,10 +138,10 @@ export default function ExportView({ analysis }) {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-8 space-y-6">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8 space-y-6">
       {/* Summary Card */}
       <div className={`rounded-xl border p-6 ${getThreatLevelStyles()}`}>
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
           <div className={`w-3 h-3 rounded-full ${
             analysis.threat.level === 'High' ? 'bg-red-400' :
             analysis.threat.level === 'Medium' ? 'bg-amber-400' : 'bg-green-400'
@@ -198,7 +198,7 @@ export default function ExportView({ analysis }) {
       <div>
         <h3 className="text-lg font-medium text-slate-200 mb-4">Quick Copy</h3>
         <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-6">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <h4 className="text-slate-200 font-medium">Copy IOCs to Clipboard</h4>
               <p className="text-slate-400 text-sm mt-1">
@@ -207,7 +207,7 @@ export default function ExportView({ analysis }) {
             </div>
             <button
               onClick={handleCopyIOCs}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+              className={`w-full sm:w-auto px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                 copied === 'iocs'
                   ? 'bg-green-500/20 text-green-400'
                   : 'bg-slate-700 text-slate-200 hover:bg-slate-600'
@@ -236,7 +236,7 @@ export default function ExportView({ analysis }) {
       {/* IOC Preview */}
       <div>
         <h3 className="text-lg font-medium text-slate-200 mb-4">IOC Summary</h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-4 text-center">
             <p className="text-3xl font-semibold text-cyan-400">
               {analysis.iocs.domains.length}
