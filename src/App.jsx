@@ -68,7 +68,7 @@ function App() {
 
       <footer className="border-t border-slate-800 bg-slate-900/40">
         <div className="max-w-7xl mx-auto px-6 py-4 text-xs text-slate-500 text-center">
-          made by an analyst for analyst{' '}
+          Built by an analyst, for analysts ·{' '}
           <a
             href="https://www.heyosj.com"
             target="_blank"

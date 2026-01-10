@@ -46,11 +46,11 @@ export default function Header({ currentView, onViewChange }) {
               >
                 PRVIEW
               </button>
-              <p className="text-xs text-slate-400">Phishing Email Analyzer</p>
+              <p className="text-xs text-slate-400">Phishing analysis</p>
             </div>
           </div>
 
-          <nav className="flex items-center gap-1">
+          <nav className="flex items-center gap-4">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -64,6 +64,14 @@ export default function Header({ currentView, onViewChange }) {
                 {item.label}
               </button>
             ))}
+            <a
+              href="https://github.com/heyosj/prview/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-xs font-medium text-slate-500 hover:text-slate-300 transition-colors"
+            >
+              GitHub →
+            </a>
           </nav>
         </div>
       </div>

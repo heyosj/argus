@@ -172,11 +172,10 @@ VGhpcyBpcyBhIHNhZmUgc2FtcGxlIGF0dGFjaG1lbnQuCg==
               <div className="space-y-3">
                 <div>
                   <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Prview</p>
-                  <h2 className="text-xl font-semibold text-slate-100">Phishing email analysis</h2>
+                  <h2 className="text-xl font-semibold text-slate-100">Phishing analysis</h2>
                 </div>
                 <p className="text-sm text-slate-400 max-w-xl">
-                  Inspect headers, URLs, and impersonation signals from suspicious emails to
-                  understand what stands out before you respond.
+                  Inspect headers, URLs, and impersonation indicators in suspicious emails.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <span className="px-3 py-1 text-xs rounded-full border border-slate-700 bg-slate-800/60 text-slate-300">
@@ -190,7 +189,7 @@ VGhpcyBpcyBhIHNhZmUgc2FtcGxlIGF0dGFjaG1lbnQuCg==
                   </span>
                 </div>
                 <p className="text-xs text-slate-500">
-                  Analysis runs locally in your browser. Files are not uploaded.
+                  Analysis runs locally in your browser. Nothing is uploaded.
                 </p>
               </div>
               <div className="flex flex-col gap-2">
